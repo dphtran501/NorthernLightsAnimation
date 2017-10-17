@@ -16,25 +16,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
-        app:srcCompat="@drawable/animation_frame"/>
+        app:srcCompat="@drawable/frame_anim"/>
 
     <Button
         android:id="@+id/frameAnimButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="animateFrames"
+        android:onClick="toggleFrameAnim"
         android:text="@string/frame_anim_button_text"/>
 
     <Button
         android:id="@+id/rotateAnimButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="toggleRotateAnim"
         android:text="@string/rotate_anim_button_text"/>
 
     <Button
         android:id="@+id/shakeAnimButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="toggleShakeAnim"
         android:text="@string/shake_anim_button_text"/>
 
     <Button
