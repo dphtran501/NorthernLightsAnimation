@@ -8,6 +8,15 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+/**
+ * This activity displays an image that the user can animate by clicking on one of four buttons. The
+ * user can choose to play a frame-by-frame animation, rotate the image, shake the image, or play a
+ * custom animation.
+ *
+ * @author Derek Tran
+ * @version 1.0
+ * @since October 21, 2017
+ */
 public class AnimationActivity extends AppCompatActivity
 {
     // AnimationDrawable = used for frame animations
@@ -19,6 +28,13 @@ public class AnimationActivity extends AppCompatActivity
 
     private ImageView lightsImageView;
 
+    /**
+     * Initializes <code>MainActivity</code> by inflating its UI.
+     *
+     * @param savedInstanceState Bundle containing the data it recently supplied in
+     *                           onSaveInstanceState(Bundle) if activity was reinitialized after
+     *                           being previously shut down. Otherwise it is null.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -28,6 +44,10 @@ public class AnimationActivity extends AppCompatActivity
         lightsImageView = (ImageView) findViewById(R.id.lightsImageView);
     }
 
+    /**
+     * Toggles the frame animation of the image.
+     * @param v The view that called this method.
+     */
     public void toggleFrameAnim(View v)
     {
         // hasn't been initialized yet
@@ -42,6 +62,10 @@ public class AnimationActivity extends AppCompatActivity
         else frameAnim.start();
     }
 
+    /**
+     * Toggles rotation animation of the image.
+     * @param v The view that called this method.
+     */
     public void toggleRotateAnim(View v)
     {
         // hasn't been initialized yet
@@ -53,6 +77,10 @@ public class AnimationActivity extends AppCompatActivity
             lightsImageView.clearAnimation();
     }
 
+    /**
+     * Toggles shake animation of the image.
+     * @param v The view that called this method.
+     */
     public void toggleShakeAnim(View v)
     {
         shakeAnim = AnimationUtils.loadAnimation(this, R.anim.shake_anim);
