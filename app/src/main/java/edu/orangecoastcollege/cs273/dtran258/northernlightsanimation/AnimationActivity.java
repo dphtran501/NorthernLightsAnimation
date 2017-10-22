@@ -86,4 +86,14 @@ public class AnimationActivity extends AppCompatActivity
         shakeAnim = AnimationUtils.loadAnimation(this, R.anim.shake_anim);
         lightsImageView.startAnimation(shakeAnim);
     }
+
+    /**
+     * Toggles custom animation of the image.
+     * @param v The view that called this method.
+     */
+    public void toggleCustomAnim(View v)
+    {
+        customAnim = AnimationUtils.loadAnimation(this, R.anim.custom_anim);
+        lightsImageView.startAnimation(customAnim);
+    }
 }
